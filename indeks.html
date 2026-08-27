@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workfid Advisory — Coming Soon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #10192B;
+    --stone: #F4F0E8;
+    --bronze: #A9832F;
+    --line: rgba(255, 255, 255, 0.1);
+    --mono: 'JetBrains Mono', monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background-color: var(--ink);
+    color: var(--stone);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px;
+  }
+  @media (max-width: 768px) {
+    body { padding: 24px; }
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .brand-main {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--stone);
+  }
+  .brand-main .fid {
+    color: var(--bronze);
+  }
+  .brand-divider {
+    width: 1px;
+    height: 18px;
+    background: rgba(244, 240, 232, 0.2);
+  }
+  .brand-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(244, 240, 232, 0.7);
+    font-weight: 500;
+  }
+  .badge {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    border: 1px solid rgba(169, 131, 47, 0.3);
+    padding: 6px 14px;
+    border-radius: 99px;
+  }
+  main {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    padding: 40px 0;
+  }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--bronze);
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+    letter-spacing: -0.02em;
+  }
+  .tagline {
+    font-size: clamp(16px, 2vw, 20px);
+    color: rgba(244, 240, 232, 0.75);
+    margin-bottom: 40px;
+    max-width: 600px;
+    line-height: 1.5;
+  }
+  .pillars {
+    display: flex;
+    gap: 24px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(244, 240, 232, 0.5);
+    margin-bottom: 48px;
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+  }
+  .pillars span { color: var(--stone); }
+  @media (max-width: 600px) {
+    .pillars { flex-direction: column; gap: 8px; }
+  }
+  .contact-box {
+    display: flex;
+    gap: 12px;
+    max-width: 480px;
+  }
+  input[type="email"] {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 14px 18px;
+    border-radius: 6px;
+    color: var(--stone);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  input[type="email"]:focus {
+    border-color: var(--bronze);
+  }
+  button {
+    background: var(--bronze);
+    color: var(--ink);
+    border: none;
+    padding: 14px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  button:hover {
+    opacity: 0.9;
+  }
+  .success-message {
+    display: none;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--bronze);
+    text-transform: uppercase;
+    padding: 14px 0;
+  }
+  footer {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: rgba(244, 240, 232, 0.4);
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+  }
+  @media (max-width: 600px) {
+    footer { flex-direction: column; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div class="brand-lockup">
+      <div class="brand-main">Work<span class="fid">Fid</span></div>
+      <div class="brand-divider"></div>
+      <div class="brand-sub">Advisory</div>
+    </div>
+    <div class="badge">Private Launch</div>
+  </header>
+
+  <main>
+    <div class="eyebrow">Business Architecture &middot; Executive Advisory</div>
+    <h1>We bridge the distance.</h1>
+    <p class="tagline">Engineering institutional trust and operational execution from the Nordic corridor to the Gulf and Levant markets.</p>
+    
+    <div class="pillars">
+      <div>Stage 01: <span>SEEDS</span></div>
+      <div>Stage 02: <span>PROOF</span></div>
+      <div>Stage 03: <span>ADDON</span></div>
+    </div>
+
+    <!-- Web3Forms Form -->
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-box" id="waitlist-form">
+      <input type="hidden" name="access_key" value="3c85ac2a-5876-420a-8aec-6f263f3a2286">
+      <input type="email" name="email" placeholder="Enter executive email..." required aria-label="Email address" />
+      <button type="submit">Request Access</button>
+    </form>
+    
+    <div id="success-msg" class="success-message">
+      &check; Access requested. We will be in touch shortly.
+    </div>
+  </main>
+
+  <footer>
+    <div>&copy; 2026 Workfid Advisory. All rights reserved.</div>
+    <div>Nordic ↔ Gulf & Levant Corridor</div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('waitlist-form');
+    const successMsg = document.getElementById('success-msg');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(async (response) => {
+        let json = await response.json();
+        if (json.success) {
+          form.style.display = 'none';
+          successMsg.style.display = 'block';
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      })
+      .catch((error) => {
+        alert('Submission error. Please try again.');
+      });
+    });
+  </script>
+</body>
+</html>
